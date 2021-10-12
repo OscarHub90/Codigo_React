@@ -1,6 +1,7 @@
 import React from 'react'
 import tech_fun_horizontal_white from '../assets/tech_fun_horizontal_white.png';
 
+
 function Ventas() {
     return (
         <div classNameName="Appp">
