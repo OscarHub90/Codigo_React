@@ -2,7 +2,7 @@ import React from 'react'
 import google_logo_white from 'assets/google_logo_white.png';
 import tech_fun_horizontal_300 from 'assets/tech_fun_horizontal_300.png';
 
-function Login() {
+const Login = () => {
     return (
         <div>
             <div className="limiter">

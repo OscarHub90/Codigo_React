@@ -2,9 +2,9 @@ import React from 'react'
 import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 import {Link} from 'react-router-dom'
 
-function Ventas() {
+const Ventas = () => {
     return (
-        <div classNameName="Appp">
+        <div classNameName="App">
         <nav className="navbar navbar-expand-lg navbar-dark py-0 barColor">
             <a className="navbar-brand" href="#"/>
                 <img className="ml-4" src={tech_fun_horizontal_white} width="167" height="59" alt="Tech & Fun Logo" loading="lazy"/>          

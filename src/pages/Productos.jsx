@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 
-function Productos() {
+const Productos = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark py-0 barColor ">
@@ -46,7 +46,10 @@ function Productos() {
   </div>
 
         {/* New User Button */}
-        {/*Llamar modal add_products*/}
+        <div className="col">
+            <button type="button" className="btn btn-size float-right btnColor" data-toggle="modal" 
+            data-target="#newUserModal" id="addUserBtnModal">Agregar Productos</button>
+            </div>    
         
         
 

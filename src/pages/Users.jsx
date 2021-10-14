@@ -5,7 +5,7 @@ import frame from 'assets/frame.png';
 import avatar_user from 'assets/avatar_user.png';
 import {Link} from 'react-router-dom'
 
-function Users() {
+const Users = () => {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark py-0 barColor ">
