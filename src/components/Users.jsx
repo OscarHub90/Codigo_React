@@ -1,8 +1,10 @@
 import React from 'react'
-import tech_fun_horizontal_white from '../assets/tech_fun_horizontal_white.png';
-import user_not_found from '../assets/user_not_found.png';
+import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
+import user_not_found from 'assets/user_not_found.png';
+import frame from 'assets/frame.png';
+import avatar_user from 'assets/avatar_user.png';
 
-function Productos() {
+function Users() {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark py-0 barColor ">
@@ -12,42 +14,43 @@ function Productos() {
     <div className="collapse navbar-collapse justify-content-end navbar-margin" id="navBar">
       <div className="navbar-nav">
         <a className="nav-link mx-1" href="../index.html">Ventas</a>
-        <a className="nav-link mx-1" href="#">Productos<span className="sr-only">(current)</span></a>
-        <a className="nav-link mx-1 active" href="./users.html" id="navLinkUsers">Usuarios</a>
-          
+        <a className="nav-link mx-1" href="./products.htmll">Productos</a>
+        <a className="nav-link mx-1 active" href="#" id="navLinkUsers">Usuarios<span className="sr-only">(current)</span></a>
+        
       </div>
     </div>
   </nav>
 
   <main className="main mx-4">
     <section>
-      <h1 className="title mt-5 mb-3">Productos</h1>
+      <h1 className="title mt-5 mb-3">Usuarios</h1>
 
       {/* Search Bar  */}
-      <div className="d-flex flex-row justify-content-between">
-        <div className="d-flex flex-row">
-            <div className="input-group filter mr-2">
-                <input type="text" className="form-control filter-input"
-                    aria-label="Text input" id="searchBar"/>
-               
-            </div>
-             {/* Button Search */}
 
-             <button type="button" className="btn btn-outline-secondary btn-search" id="btnSearch"><i className="fa fa-search"
+      <div className="d-flex flex-row justify-content-between " >
+        <div className="d-flex flex-row hiddenControl">
+          <div className="input-group filter mr-2">
+            <input type="text" className="form-control" aria-label="Text input with dropdown button"/>
+          </div>
+
+          {/* Button Search */}
+
+          <button type="button" className="btn btn-outline-secondary btn-search"><i className="fa fa-search"
               aria-hidden="true"></i></button>
 
-  </div>
+        </div>
 
         {/* New User Button */}
 
         <div className="col">
           <button type="button" className="btn btn-size float-right btnColor" data-toggle="modal" data-target="#newUserModal" id="addUserBtnModal">Agregar
-            Productos</button>
+            Usuarios</button>
         </div>
 
         {/* END New User Button */}
 
       </div>
+
       {/* END Search Bar and Filters */}
 
       {/* ESTO HAY QUE VALIDARLO NO SE ESTÁ USANDO  */}
@@ -65,9 +68,10 @@ function Productos() {
         <thead>
           <tr className="table-bordered">
 
-            <th className="align-middle pl-5" scope="col">Identificador</th>
-            <th className="align-middle" scope="col">Descripción</th>
-            <th className="align-middle pl-5" scope="col">Valor</th>
+            <th className="align-middle pl-5" scope="col">Nombre(s)</th>
+            <th className="align-middle" scope="col">Apellido(s)</th>
+            <th className="align-middle pl-5" scope="col">Email</th>
+            <th className="align-middle" scope="col">Perfil</th>
             <th className="align-middle" scope="col">Estado</th>
             <th className="align-middle" scope="col">Acciones</th>
           </tr>  
@@ -76,30 +80,55 @@ function Productos() {
         <tbody className="users-body-table" id="users-body-table">
 
           <tr>
-            <td className="align-middle pl-5">Producto 001</td>
-            <td className="align-middle">...</td>
-            <td className="align-middle pl-5">35.000 </td>
-            <td className="align-middle">Disponible</td>
+            <td className="align-middle pl-5">Johana</td>
+            <td className="align-middle">Ramírez</td>
+            <td className="align-middle pl-5">jramirez@techfun.com </td>
+            <td className="align-middle">Vendedor</td>
+            <td className="align-middle">Pendiente</td>
             <td className="align-middle">
                 <button type="button" className="btn btn-lg text-black-50 ml-n3 delete" data-id="${userID}" data-toggle="modal" data-target="#deleteUserModal"><i className="fa fa-trash-alt" aria-hidden="true"></i></button>
                 <button type="button" className="btn btn-lg text-black-50 edit" data-id="${userID}" data-toggle="modal" data-target="#editUserModal"><i className="fa fa-pencil-alt" aria-hidden="true"></i></button>
             </td>
           </tr>
           <tr>
-            <td className="align-middle pl-5">Producto 002</td>
-            <td className="align-middle">...</td>
-            <td className="align-middle pl-5">117.500 </td>
-            <td className="align-middle">No disponible</td>
+            <td className="align-middle pl-5">Oscar</td>
+            <td className="align-middle">Clavijo</td>
+            <td className="align-middle pl-5">oclavijo@techfun.com </td>
+            <td className="align-middle">Administrador</td>
+            <td className="align-middle">No Autorizado</td>
             <td className="align-middle">
                 <button type="button" className="btn btn-lg text-black-50 ml-n3 delete" data-id="${userID}" data-toggle="modal" data-target="#deleteUserModal"><i className="fa fa-trash-alt" aria-hidden="true"></i></button>
                 <button type="button" className="btn btn-lg text-black-50 edit" data-id="${userID}" data-toggle="modal" data-target="#editUserModal"><i className="fa fa-pencil-alt" aria-hidden="true"></i></button>
             </td>
           </tr>
           <tr>
-            <td className="align-middle pl-5">Producto 003</td>
-            <td className="align-middle">...</td>
-            <td className="align-middle pl-5">22.700 </td>
-            <td className="align-middle">Disponible</td>
+            <td className="align-middle pl-5">Diego</td>
+            <td className="align-middle">Parra</td>
+            <td className="align-middle pl-5">dparra@techfun.com </td>
+            <td className="align-middle">Vendedor</td>
+            <td className="align-middle">Autorizado</td>
+            <td className="align-middle">
+                <button type="button" className="btn btn-lg text-black-50 ml-n3 delete" data-id="${userID}" data-toggle="modal" data-target="#deleteUserModal"><i className="fa fa-trash-alt" aria-hidden="true"></i></button>
+                <button type="button" className="btn btn-lg text-black-50 edit" data-id="${userID}" data-toggle="modal" data-target="#editUserModal"><i className="fa fa-pencil-alt" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+          <tr>
+            <td className="align-middle pl-5">Marisol</td>
+            <td className="align-middle">Vanegas</td>
+            <td className="align-middle pl-5">mvanegas@techfun.com</td>
+            <td className="align-middle">Administrador</td>
+            <td className="align-middle">Autorizado</td>
+            <td className="align-middle">
+                <button type="button" className="btn btn-lg text-black-50 ml-n3 delete" data-id="${userID}" data-toggle="modal" data-target="#deleteUserModal"><i className="fa fa-trash-alt" aria-hidden="true"></i></button>
+                <button type="button" className="btn btn-lg text-black-50 edit" data-id="${userID}" data-toggle="modal" data-target="#editUserModal"><i className="fa fa-pencil-alt" aria-hidden="true"></i></button>
+            </td>
+          </tr>
+            <tr>
+            <td className="align-middle pl-5">Diana</td>
+            <td className="align-middle">Pineda Prada</td>
+            <td className="align-middle pl-5">dprada@techfun.com </td>
+            <td className="align-middle">Vendedor</td>
+            <td className="align-middle">Autorizado</td>
             <td className="align-middle">
                 <button type="button" className="btn btn-lg text-black-50 ml-n3 delete" data-id="${userID}" data-toggle="modal" data-target="#deleteUserModal"><i className="fa fa-trash-alt" aria-hidden="true"></i></button>
                 <button type="button" className="btn btn-lg text-black-50 edit" data-id="${userID}" data-toggle="modal" data-target="#editUserModal"><i className="fa fa-pencil-alt" aria-hidden="true"></i></button>
@@ -122,7 +151,7 @@ function Productos() {
         <div className="modal-body text-center mt-1">
           <input type="hidden" id="userIDDelete" name="userIDDelete"/>
           <img src={user_not_found} alt="Delete logo"/>
-          <p className="pt-4">¿Seguro que deseas eliminar el producto seleccionado?</p>
+          <p className="pt-4">¿Seguro que deseas eliminar el usuarios seleccionado?</p>
         </div>
         <div className="modal-footer border-top-0 justify-content-around">
           <button type="button" className="btn btn-success  btn-lg border-0 btnColor"
@@ -133,50 +162,74 @@ function Productos() {
       </div>
     </div>
   </div>
+
   {/* END Delete Users Modal */}
 
   {/* NEW Users Modal */}
+
   <div className="modal fade" id="newUserModal" tabindex="-1">
     <div className="modal-dialog modal-dialog-centered modal-lg">
       <div className="modal-content">
         <div className="modal-header barColor  new-contact-modal-header">
-          <h1 className="title m-0 text-white">Nuevo Producto</h1>
+          <h1 className="title m-0 text-white">Nueva Venta</h1>
           <button type="button" className="close text-white" data-dismiss="modal">&times;</button>
         </div>
         <div className="modal-body">
           <div id="newUserForm">
             <div className="form-group form-row border py-4 px-2 borders-new-user-modal bg-white">
               <div className="col- position-relative ml-2 mr-3">
+
+                <div className="imgBtnAddPic">
+                  {/*
+                  <img src="../assets/frame_avatar.png" alt="Agregar Imagen" className="imgBtnAddPic__userImg" />  */}
+
+                  <img src={frame} alt="User Frame" className="imgBtnAddPic__frame" />
+                  <img src={avatar_user} alt="User Image" className="imgBtnAddPic__frame--img"
+                    id="editUserImage" />
+
+                </div>
               </div>
               <div className="col">
-                <label for="newUserName" className="col-form-label col-form-label-sm">Identificador<span
+                <label for="newUserName" className="col-form-label col-form-label-sm">Nombre(s)<span
                     className="text-danger">*</span></label>
                 <input type="text" className="form-control form-control-sm" id="newUserName" name="newUserName"/>
               </div>
               <div className="col">
-                <label for="userLastName" className="col-form-label col-form-label-sm">Descripción<span
+                <label for="userLastName" className="col-form-label col-form-label-sm">Apellido<span
                     className="text-danger">*</span></label>
                 <input type="text" className="form-control form-control-sm" id="userLastName" name="userLastName"/>
               </div>
               <div className="col">
-                <label for="userEmail" className="col-form-label col-form-label-sm">Valor<span
+                <label for="userEmail" className="col-form-label col-form-label-sm">Email<span
                     className="text-danger">*</span></label>
-                <input type="email" className="form-control form-control-sm" id="userEmail" name="userEmail" title="Por favor, especifique una dirección de correo válida." pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                <input type="email" className="form-control form-control-sm" id="userEmail" name="userEmail" placeholder="chofy@ejemplo.com" title="Por favor, especifique una dirección de correo válida." pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
                 [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"/>
               </div>
             </div>
 
             <div className="form-group form-row border py-4  borders-new-user-modal bg-white">
               <div className="col- position-relative ml-2 mr-3">
+
               </div>
               <div className="col">
-                <label for="userProfile" className="col-form-label col-form-label-sm">Estado<span
+                <label for="userProfile" className="col-form-label col-form-label-sm">Perfil del Usuario<span
                     className="text-danger">*</span></label>
                 <select type="text" className="form-control form-control-sm" id="userProfile" name="userProfile">
-                  <option selected disabled value="0">Seleccionar estado</option>
-                  <option value="Admin">Disponible</option>
-                  <option value="Basic">No disponible</option>
+                  <option selected disabled value="0">Seleccionar Perfil</option>
+                  <option value="Admin">Administrador</option>
+                  <option value="Basic">Vendedor</option>
                 </select>
+              </div>
+              <div className="col">
+                <label for="newUserPassword" className="col-form-label col-form-label-sm">Password<span
+                    className="text-danger">*</span></label>
+                <input type="password" className="form-control form-control-sm" id="newUserPassword" name="newUserPassword"/>
+              </div>
+              <div className="col">
+                <label for="newUserPasswordConfirm" className="col-form-label col-form-label-sm">Repetir Password<span
+                    className="text-danger">*</span></label>
+                <input type="password" className="form-control form-control-sm" id="newUserPasswordConfirm"
+                  name="newUserPasswordConfirm"/>
               </div>
             </div>
             <div className="form-group form-row mt-4 mb-0">
@@ -189,60 +242,93 @@ function Productos() {
           <button type="button" className="btn btn-success btn-lg border-0 btnColor"
             data-dismiss="modal">Cancelar</button>
           <button type="button" className="btn btn-success btn-lg btnColor create"
-            id="createUserBtn">Guardar Producto</button>
+            id="createUserBtn">Guardar Usuario</button>
         </div>
       </div>
     </div>
   </div>
+
   {/* END New Users Modal */}
 
   {/* Modify Users Modal */}
+
   <div className="modal fade" id="editUserModal" tabindex="-1">
     <div className="modal-dialog modal-dialog-centered modal-lg">
       <div className="modal-content">
         <div className="modal-header new-contact-modal-header barColor">
-          <h1 className="title m-0 text-white">Actualizar Producto</h1>
+          <h1 className="title m-0 text-white">Actualizar Usuario</h1>
           <button type="button" className="close text-white" data-dismiss="modal">&times;</button>
         </div>
         <div className="modal-body">
           <div id="editContactForm">
             <div className="form-group form-row border py-4 px-2 borders-new-user-modal bg-white">
+              <div className="col- position-relative ml-2 mr-3">
+
+                <div className="imgBtnAddPic">
+                  <img src={frame} alt="User Frame" className="imgBtnAddPic__frame" />
+                  <img src={avatar_user} alt="User Image" className="imgBtnAddPic__frame--img"
+                    id="editUserImage" />
+                  <input type="hidden" id="userID" name="userID"/>
+                </div>
+
+              </div>
               <div className="col">
-                <label for="editUserName" className="col-form-label col-form-label-sm">Identificador</label>
+                <label for="editUserName" className="col-form-label col-form-label-sm">Nombre(s)</label>
                 <input type="text" className="form-control form-control-sm" id="editUserName" name="editUserName"/>
               </div>
               <div className="col">
-                <label for="editUserLastName" className="col-form-label col-form-label-sm">Descripción</label>
+                <label for="editUserLastName" className="col-form-label col-form-label-sm">Apellido</label>
                 <input type="text" className="form-control form-control-sm" id="editUserLastName" name="editUserLastName"/>
               </div>
               <div className="col">
-                <label for="editUserEmail" className="col-form-label col-form-label-sm">Valor</label>
-                <input type="email" className="form-control form-control-sm" id="editUserEmail" name="editUserEmail" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                <label for="editUserEmail" className="col-form-label col-form-label-sm">Email</label>
+                <input type="email" className="form-control form-control-sm" id="editUserEmail" name="editUserEmail" placeholder="chofy@ejemplo.com" title="Por favor, especifique una dirección de correo válida." pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
                 [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"/>
               </div>
             </div>
 
             <div className="form-group form-row border py-4  borders-new-user-modal bg-white">
+              <div className="col- position-relative ml-2 mr-3">
+
+              </div>
+
               <div className="col">
-                <label for="editUserProfile" className="col-form-label col-form-label-sm">Estado del producto</label>
+                <label for="editUserProfile" className="col-form-label col-form-label-sm">Perfil del Usuario</label>
                 <select type="text" className="form-control form-control-sm" id="editUserProfile" name="editUserProfile">
-                  <option selected disabled value="0">Seleccionar estado</option>
-                  <option value="Admin">Disponible</option>
-                  <option value="Basic">No disponible</option>
+                  <option selected disabled value="0">Seleccionar Perfil</option>
+                  <option value="Admin">Administrador</option>
+                  <option value="Basic">Vendedor</option>
                 </select>
               </div>
+              <div className="col">
+                <label for="editUserState" className="col-form-label col-form-label-sm">Estado del Usuario</label>
+                <select type="text" className="form-control form-control-sm" id="editUserState" name="editUserState">
+                  <option selected disabled value="0">Seleccionar Estado</option>
+                  <option value="Enabled">Pendiente</option>
+                  <option value="Disabled">Autorizado</option>
+                  <option value="Disabled">No Autorizado</option>
+                </select>
+              </div>
+              <div className="col">
+                <label for="editUserPassword" className="col-form-label col-form-label-sm">Password</label>
+                <input type="password" className="form-control form-control-sm" id="editUserPassword"
+                  name="editUserPassword"/>
+              </div>
+
             </div>
+
           </div>
         </div>
         <div className="modal-footer border-top-0">
           <button type="button" className="btn btn-success  btn-lg border-0 btnColor border-0"
             data-dismiss="modal">Cancelar</button>
           <button type="button" className="btn btn-success btn-lg  create btnColor border-0" id="editUserBtn"
-            >Actualizar Producto</button>
+            >Actualizar contacto</button>
         </div>
       </div>
     </div>
   </div>
+
   {/* END Modify Users Modal */}
 
   <div className="error-msg"></div>
@@ -270,9 +356,8 @@ function Productos() {
 
 
   {/* END Scripts */}
-
         </div>
     )
 }
 
-export default Productos
+export default Users

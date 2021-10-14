@@ -1,5 +1,5 @@
 import React from 'react'
-import tech_fun_horizontal_white from '../assets/tech_fun_horizontal_white.png';
+import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 
 
 function Ventas() {
