@@ -1,6 +1,10 @@
 import React from 'react'
 import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 import user_not_found from 'assets/user_not_found.png';
+import Agregar_productos from 'modals/add_products'
+import {Link} from 'react-router-dom'
+
+
 
 function Productos() {
     return (
@@ -11,10 +15,13 @@ function Productos() {
     </a>
     <div className="collapse navbar-collapse justify-content-end navbar-margin" id="navBar">
       <div className="navbar-nav">
-        <a className="nav-link mx-1" href="../index.html">Ventas</a>
-        <a className="nav-link mx-1" href="#">Productos<span className="sr-only">(current)</span></a>
-        <a className="nav-link mx-1 active" href="./users.html" id="navLinkUsers">Usuarios</a>
-          
+        <Link to='/Ventas'>
+        <div className="nav-link mx-1" href="../index.html">Ventas</div>
+        </Link>
+        <div className="nav-link mx-1" href="#">Productos<span className="sr-only">(current)</span></div>
+        <Link to='/Users'>
+        <div className="nav-link mx-1 active" href="./users.html" id="navLinkUsers">Usuarios</div>
+        </Link>  
       </div>
     </div>
   </nav>
@@ -39,11 +46,9 @@ function Productos() {
   </div>
 
         {/* New User Button */}
-
-        <div className="col">
-          <button type="button" className="btn btn-size float-right btnColor" data-toggle="modal" data-target="#newUserModal" id="addUserBtnModal">Agregar
-            Productos</button>
-        </div>
+        {/*Llamar modal add_products*/}
+        
+        
 
         {/* END New User Button */}
 

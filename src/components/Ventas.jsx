@@ -1,6 +1,6 @@
 import React from 'react'
 import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
-
+import {Link} from 'react-router-dom'
 
 function Ventas() {
     return (
@@ -12,8 +12,12 @@ function Ventas() {
         <div className="collapse navbar-collapse justify-content-end navbar-margin" id="navBar">
             <div className="navbar-nav">
                 <a className="nav-link mx-1 active" href="#">Ventas<span className="sr-only">(current)</span></a>
-                <a className="nav-link mx-1" href="./views/companies.html">Productos</a>
-                <a className="nav-link mx-1 users-tab" href="./views/users.html" id="navLinkUsers">Usuarios</a>
+                <Link to='/Productos'>
+                <div className="nav-link mx-1" href="./views/companies.html">Productos</div>
+                </Link>
+                <Link to='/Users'>
+                <div className="nav-link mx-1 users-tab" href="./views/users.html" id="navLinkUsers">Usuarios</div>
+                </Link>
             </div>
         </div>
         </nav>

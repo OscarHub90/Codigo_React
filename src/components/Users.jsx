@@ -3,6 +3,7 @@ import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 import user_not_found from 'assets/user_not_found.png';
 import frame from 'assets/frame.png';
 import avatar_user from 'assets/avatar_user.png';
+import {Link} from 'react-router-dom'
 
 function Users() {
     return (
@@ -13,8 +14,12 @@ function Users() {
     </a>
     <div className="collapse navbar-collapse justify-content-end navbar-margin" id="navBar">
       <div className="navbar-nav">
-        <a className="nav-link mx-1" href="../index.html">Ventas</a>
-        <a className="nav-link mx-1" href="./products.htmll">Productos</a>
+      <Link to='/Ventas'>
+        <div className="nav-link mx-1" href="../index.html">Ventas</div>
+      </Link>
+      <Link to='/Productos'>
+        <div className="nav-link mx-1" href="./products.htmll">Productos</div>
+      </Link>
         <a className="nav-link mx-1 active" href="#" id="navLinkUsers">Usuarios<span className="sr-only">(current)</span></a>
         
       </div>
