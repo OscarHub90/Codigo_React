@@ -1,8 +1,8 @@
 import React from 'react'
 import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 import user_not_found from 'assets/user_not_found.png';
-import Agregar_productos from 'modals/add_products'
 import {Link} from 'react-router-dom'
+import add_products from 'components/add_products';
 
 
 
@@ -45,15 +45,63 @@ const Productos = () => {
 
   </div>
 
-        {/* New User Button */}
+        {/* Modal agregar productos */}
+      
+        
         <div className="col">
             <button type="button" className="btn btn-size float-right btnColor" data-toggle="modal" 
             data-target="#newUserModal" id="addUserBtnModal">Agregar Productos</button>
-            </div>    
+        </div>    
         
-        
+        <div className="modal fade" id="editUserModal" tabindex="-1">
+            <div className="modal-dialog modal-dialog-centered modal-lg">
+            <div className="modal-content">
+                <div className="modal-header new-contact-modal-header barColor">
+                    <h1 className="title m-0 text-white">Actualizar Producto</h1>
+                    <button type="button" className="close text-white" data-dismiss="modal">&times;</button>
+                </div>
+                <div className="modal-body">
+                <div id="editContactForm">
+                <div className="form-group form-row border py-4 px-2 borders-new-user-modal bg-white">
+                    <div className="col">
+                    <label for="editUserName" className="col-form-label col-form-label-sm">Identificador</label>
+                    <input type="text" className="form-control form-control-sm" id="editUserName" name="editUserName"/>
+                    </div>
+                    <div className="col">
+                    <label for="editUserLastName" className="col-form-label col-form-label-sm">Descripción</label>
+                    <input type="text" className="form-control form-control-sm" id="editUserLastName" name="editUserLastName"/>
+                    </div>
+                    <div className="col">
+                    <label for="editUserEmail" className="col-form-label col-form-label-sm">Valor</label>
+                    <input type="email" className="form-control form-control-sm" id="editUserEmail" name="editUserEmail" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                    [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"/>
+                    </div>
+                </div>
 
-        {/* END New User Button */}
+                <div className="form-group form-row border py-4  borders-new-user-modal bg-white">
+                    <div className="col">
+                    <label for="editUserProfile" className="col-form-label col-form-label-sm">Estado del producto</label>
+                    <select type="text" className="form-control form-control-sm" id="editUserProfile" name="editUserProfile">
+                        <option selected disabled value="0">Seleccionar estado</option>
+                        <option value="Admin">Disponible</option>
+                        <option value="Basic">No disponible</option>
+                    </select>
+                    </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div className="modal-footer border-top-0">
+                <button type="button" className="btn btn-success  btn-lg border-0 btnColor border-0"
+                data-dismiss="modal">Cancelar</button>
+                <button type="button" className="btn btn-success btn-lg  create btnColor border-0" id="editUserBtn"
+                >Actualizar Producto</button>
+            </div>
+            
+        </div>
+        </div>
+
+        {/* fin modal agregar productos */}
 
       </div>
       {/* END Search Bar and Filters */}
@@ -204,54 +252,6 @@ const Productos = () => {
   </div>
   {/* END New Users Modal */}
 
-  {/* Modify Users Modal */}
-  <div className="modal fade" id="editUserModal" tabindex="-1">
-    <div className="modal-dialog modal-dialog-centered modal-lg">
-      <div className="modal-content">
-        <div className="modal-header new-contact-modal-header barColor">
-          <h1 className="title m-0 text-white">Actualizar Producto</h1>
-          <button type="button" className="close text-white" data-dismiss="modal">&times;</button>
-        </div>
-        <div className="modal-body">
-          <div id="editContactForm">
-            <div className="form-group form-row border py-4 px-2 borders-new-user-modal bg-white">
-              <div className="col">
-                <label for="editUserName" className="col-form-label col-form-label-sm">Identificador</label>
-                <input type="text" className="form-control form-control-sm" id="editUserName" name="editUserName"/>
-              </div>
-              <div className="col">
-                <label for="editUserLastName" className="col-form-label col-form-label-sm">Descripción</label>
-                <input type="text" className="form-control form-control-sm" id="editUserLastName" name="editUserLastName"/>
-              </div>
-              <div className="col">
-                <label for="editUserEmail" className="col-form-label col-form-label-sm">Valor</label>
-                <input type="email" className="form-control form-control-sm" id="editUserEmail" name="editUserEmail" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
-                [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"/>
-              </div>
-            </div>
-
-            <div className="form-group form-row border py-4  borders-new-user-modal bg-white">
-              <div className="col">
-                <label for="editUserProfile" className="col-form-label col-form-label-sm">Estado del producto</label>
-                <select type="text" className="form-control form-control-sm" id="editUserProfile" name="editUserProfile">
-                  <option selected disabled value="0">Seleccionar estado</option>
-                  <option value="Admin">Disponible</option>
-                  <option value="Basic">No disponible</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="modal-footer border-top-0">
-          <button type="button" className="btn btn-success  btn-lg border-0 btnColor border-0"
-            data-dismiss="modal">Cancelar</button>
-          <button type="button" className="btn btn-success btn-lg  create btnColor border-0" id="editUserBtn"
-            >Actualizar Producto</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/* END Modify Users Modal */}
 
   <div className="error-msg"></div>
 
