@@ -2,7 +2,7 @@ import React from 'react'
 import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 import user_not_found from 'assets/user_not_found.png';
 import {Link} from 'react-router-dom'
-import add_products from 'components/add_products';
+
 
 
 
@@ -61,20 +61,20 @@ const Productos = () => {
                     <button type="button" className="close text-white" data-dismiss="modal">&times;</button>
                 </div>
                 <div className="modal-body">
-                <div id="editContactForm">
-                <div className="form-group form-row border py-4 px-2 borders-new-user-modal bg-white">
+                  <div id="editContactForm">
+                    <div className="form-group form-row border py-4 px-2 borders-new-user-modal bg-white">
+                      <div className="col">
+                        <label for="editUserName" className="col-form-label col-form-label-sm">Identificador</label>
+                        <input type="text" className="form-control form-control-sm" id="editUserName" name="editUserName"/>
+                      </div>
                     <div className="col">
-                    <label for="editUserName" className="col-form-label col-form-label-sm">Identificador</label>
-                    <input type="text" className="form-control form-control-sm" id="editUserName" name="editUserName"/>
+                      <label for="editUserLastName" className="col-form-label col-form-label-sm">Descripción</label>
+                      <input type="text" className="form-control form-control-sm" id="editUserLastName" name="editUserLastName"/>
                     </div>
                     <div className="col">
-                    <label for="editUserLastName" className="col-form-label col-form-label-sm">Descripción</label>
-                    <input type="text" className="form-control form-control-sm" id="editUserLastName" name="editUserLastName"/>
-                    </div>
-                    <div className="col">
-                    <label for="editUserEmail" className="col-form-label col-form-label-sm">Valor</label>
-                    <input type="email" className="form-control form-control-sm" id="editUserEmail" name="editUserEmail" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
-                    [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"/>
+                      <label for="editUserEmail" className="col-form-label col-form-label-sm">Valor</label>
+                      <input type="email" className="form-control form-control-sm" id="editUserEmail" name="editUserEmail" pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}
+                      [a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/"/>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@ const Productos = () => {
             
         </div>
         </div>
-
+                          
         {/* fin modal agregar productos */}
 
       </div>
@@ -261,19 +261,19 @@ const Productos = () => {
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"/>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"/>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
     integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"/>
 
   {/* END jQuery, Popper and Bootstrap JS */}
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"/>
 
-  <script src="https://kit.fontawesome.com/7396023e43.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7396023e43.js" crossorigin="anonymous"/>
 
 
 
