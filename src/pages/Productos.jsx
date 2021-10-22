@@ -3,9 +3,6 @@ import tech_fun_horizontal_white from 'assets/tech_fun_horizontal_white.png';
 import user_not_found from 'assets/user_not_found.png';
 import {Link} from 'react-router-dom'
 
-
-
-
 const Productos = () => {
     return (
         <div>
@@ -102,7 +99,7 @@ const Productos = () => {
         </div>
                           
         {/* fin modal agregar productos */}
-
+  
       </div>
       {/* END Search Bar and Filters */}
 
